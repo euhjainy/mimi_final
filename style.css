@@ -577,6 +577,10 @@ body {
           font-size: 1vw;
         }
 
+        .credit_tel {
+          display: none;
+        }
+
 
 /* SMARTPHONE */
 
@@ -599,6 +603,21 @@ body {
   .colonnesmartphone{
     background-color: lawngreen;
   } */
+
+  .credit_tel {
+    color: rgb(136, 136, 136);
+    text-decoration: none;
+    display:flex;
+    padding-left: 10px;
+    font-size: 15px;
+  }
+
+  .credit_tel a {
+    font-style: italic;
+    color: rgb(136, 136, 136);
+    filter: blur(0.5px);
+    text-decoration: none;
+  }
 
   /* CURSOR */
   body{
