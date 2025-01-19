@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
   <link rel="icon" href="medias/binder_frame0001.png"> 
 </head>
-<body>
+<body style="display: block;">
   
   <div class='cursor' id="cursor"></div>
 
@@ -62,31 +62,43 @@
  <div id="introduction" style="display: none;">
   <img src="medias/binder_mila.gif" alt="Image d'introduction" onload="img_load();">
 </div>
-<!-- <script>
-let t ;
-function img_load() {
-$("body").css("display","block");
-t = localStorage.getItem("lecture");
 
-  if (t == "ok") {
-    const intro = document.getElementById('introduction');
-              const mainContent = document.getElementById('main-content');
-              if (intro && mainContent) {
-                intro.style.display = 'none'; 
-                mainContent.style.display = 'block'; 
-                mainContent.style.opacity = '1'; 
-    
-                if (typeof $ !== "undefined" && $('.your-class').slick) {
-                  $('.your-class').slick('setPosition'); 
+<script>
+
+
+
+
+  let t ;
+  
+  
+  
+  function img_load() {
+  
+  
+  
+  
+  
+    $("body").css("display","block");
+    t = localStorage.getItem("lecture");
+  
+    if (t == "ok") {
+  
+      const intro = document.getElementById('introduction');
+                const mainContent = document.getElementById('main-content');
+                if (intro && mainContent) {
+                  intro.style.display = 'none'; 
+                  mainContent.style.display = 'block'; 
+                  mainContent.style.opacity = '1'; 
+      
+                  if (typeof $ !== "undefined" && $('.your-class').slick) {
+                    $('.your-class').slick('setPosition'); 
+                  }
                 }
-              }
-
-
-    } 
-    
-    else {
-
-    document.addEventListener("DOMContentLoaded", function () { 
+  
+  
+    } else {
+  
+     document.addEventListener("DOMContentLoaded", function () { 
       
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
       
@@ -102,8 +114,10 @@ t = localStorage.getItem("lecture");
                     $('.your-class').slick('setPosition'); 
                   }
                 }
-            
+             
       } else {
+      
+      
         localStorage.setItem("lecture", "ok");
         setTimeout(function () {
                   const intro = document.getElementById('introduction');
@@ -121,109 +135,538 @@ t = localStorage.getItem("lecture");
                         mainContent.style.transition = 'opacity 0.1s ease-in';
                         mainContent.style.opacity = '1'; 
                         if (typeof $ !== "undefined" && $('.your-class').slick) {
-                        $('.your-class').slick('setPosition'); 
+                          $('.your-class').slick('setPosition'); 
                         }
-                        
                       }, 5);
                     }, 80);
                   }
-                }, 4300);      
-        }
-      });
-    }
-  }
-  
-  </script> -->
-
-
-  <script>
-
-
-
-
-    let t ;
-    
-    
-    
-    function img_load() {
-    
-    
-    
-    
-    
-      $("body").css("display","block");
-      t = localStorage.getItem("lecture");
-    
-      if (t == "ok") {
-    
-        const intro = document.getElementById('introduction');
-                  const mainContent = document.getElementById('main-content');
-                  if (intro && mainContent) {
-                    intro.style.display = 'none'; 
-                    mainContent.style.display = 'block'; 
-                    mainContent.style.opacity = '1'; 
-        
-                    if (typeof $ !== "undefined" && $('.your-class').slick) {
-                      $('.your-class').slick('setPosition'); 
-                    }
-                  }
-    
-    
-      } else {
-    
-       document.addEventListener("DOMContentLoaded", function () { 
-        
-          if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-        
-                  
-                const intro = document.getElementById('introduction');
-                  const mainContent = document.getElementById('main-content');
-                  if (intro && mainContent) {
-                    intro.style.display = 'none'; 
-                    mainContent.style.display = 'block'; 
-                    mainContent.style.opacity = '1'; 
-        
-                    if (typeof $ !== "undefined" && $('.your-class').slick) {
-                      $('.your-class').slick('setPosition'); 
-                    }
-                  }
-               
-        } else {
-        
-        
-          localStorage.setItem("lecture", "ok");
-          setTimeout(function () {
-                    const intro = document.getElementById('introduction');
-                    const mainContent = document.getElementById('main-content');
-        
-                    if (intro && mainContent) { 
-                      intro.style.transition = 'opacity 0.1s ease-out';
-                      intro.style.opacity = '0';
-        
-                      setTimeout(function () {
-                        intro.style.display = 'none';
-                        mainContent.style.display = 'block'; 
-        
-                        setTimeout(function () {
-                          mainContent.style.transition = 'opacity 0.1s ease-in';
-                          mainContent.style.opacity = '1'; 
-                          if (typeof $ !== "undefined" && $('.your-class').slick) {
-                            $('.your-class').slick('setPosition'); 
-                          }
-                        }, 5);
-                      }, 80);
-                    }
-                  }, 4300);
-                   
-                }
-              });
-            }
+                }, 4300);
+                 
+              }
+            });
           }
-          
-          </script>
+        }
+        
+        </script>
+ 
+  
 
 <!-- menu, photothèque, caroussel -->
-    <div id="main-content" style="display: block; opacity: 1;">
+  <div id="main-content" style="display: block; opacity: 1;">
+      <div class="container">
+          <section class="section-right">
+            <nav class="menu">
+               <a id="titre" href="index.html"> 
+                 <p>Mila Bisbrouck</p>
+                </a>
+                <div id="menusmartphone">
+                  <ul id="titremenu">
+                    <!-- <li><a class="menu-item" id="menu-tatouage"><p>tatouages</p></a></li> -->
+                      <li><a class="menu-item" target="_blank" href="https://kidiikat.bigcartel.com"><p>shop</p></a></li>
+                      <li><a class="menu-item" id="menu-contact"><p>contact</p></a></li>
+                      <li><a class="menu-item" id="menu-info"><p>info</p></a></li>
+                  </ul>
+              </div>
+            </nav>
+
+            <div id="overlay-contact" class="overlay-menu">
+              <div class="overlay-content-menu"> <br> <br>
+                <a href="mailto:milabisbrouck@gmail.com"> </a><p><a href="mailto:milabisbrouck@gmail.com">milabisbrouck@gmail.com  </a> <br>
+                <a href="https://www.instagram.com/kidiikat?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw=="> @kidiikat  </a></p><a href="https://www.instagram.com/kidiikat?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw=="> </a>
+                  
+              </div>
+          </div>
+          <div id="overlay-info" class="overlay-menu">
+              <div class="overlay-content-menu">
+                <br> <br>
+                <p>Mila Bisbrouck est née à Roubaix et a passé son adolescence entre la France et la Belgique. Après des études écourtées à l’erg au sein des sections cinéma d’animation et bande dessinée, elle exerce aujourd’hui en région parisienne.  
+                  <br><br> Elle est notamment membre de l’équipe de gestion du lieu culturel et salon de tatouage La Kermesse, et est également une participante régulière du Fanzines ? Festival, célébration mythique de la micro-édition et de l’illustration.
+                  <br><br> Sa pratique, construite autour de différentes techniques comme le pastel gras, le crayon de couleur et le crayon graphite, remet le dessin au premier plan. Inspirée par des artistes comme Claude Ponti ou Henry Darger, Mila Bisbrouck crée dans ses dessins et tableaux des univers oniriques, où les traits du visages disparaissent parfois, au profit des paysages, des mouvements, des ornements, et où les couleurs, redistribuées de manière imprévisible entre chaque forme, se frôlent et se mélangent.
+                  <br><br> Biographie par Romane Constant.</p>
+              </div>
+          </div>
+          
+
+
+              <div class="autre"> 
+                <div class="your-class slick-initialized slick-slider"><button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button> 
+                  <div class="slick-list draggable" style="height: 296.266px;"><div class="slick-track" style="opacity: 1; width: 15352px; transform: translate3d(-808px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/9.jpg"></div><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" style="width: 808px;"><img src="medias/caroussel/1.jpg"></div><div class="slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/2.jpg"></div><div class="slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/3.jpg"></div><div class="slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/4.jpg"></div><div class="slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/5.jpg"></div><div class="slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/6.jpg"></div><div class="slick-slide" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/7.jpg"></div><div class="slick-slide" data-slick-index="7" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/8.jpg"></div><div class="slick-slide" data-slick-index="8" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/9.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="9" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/1.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="10" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/2.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="11" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/3.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="12" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/4.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="13" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/5.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="14" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/6.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="15" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/7.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="16" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/8.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="17" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/9.jpg"></div></div></div>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                           
+                <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button></div>
+              </div>
+
+              <div class="colonne">
+                  <div class="colonnes"> 
+
+                      <img id="bouee" src="medias/derniere_bouees/4.jpg" data-overlay="13"> 
+                      <h4>Après les dernières bouées</h4>
+                      <p>20 pages, 14.8x 21 <br>impression jet d’encre <br> assemblés à Bruxelles en septembre 2023</p>
+                      <img id="jeanette" src="medias/edition_mamie/1couv.jpg" data-overlay="1"> 
+                      <h4>Jeanette</h4>
+                      <p>Techniques mixtes sur papier <br>impression jet d’encre sur papier glacé <br> avril-juin 2024</p>
+                      <img id="iliona" src="medias/collaboration_Iliona/gif_iliona.gif" data-overlay="8"> 
+                      <h4><span class="span1">Le Lapin</span> &amp; <span class="span1">rater une rupture pour les nuls</span>, Iliona. </h4> 
+                      <p>Illustration <br> cover single, merchandising et web</p>
+                      <img id="Roy_Mustang" src="medias/print_roy_Mustang.jpg" data-overlay="2"> 
+                      <p>Graphite et crayon de couleur sur papier <br> 21x 29.7<br> juin 2024</p>
+                      <img id="citrouille" src="medias/2025/citrouille.jpg" data-overlay="14"> 
+                      <p>Pastel sec et gras, crayons de couleur et graphite sur papier <br> 21x 29.7<br> novembre 2024</p>
+                      <img id="danseuse" src="medias/2025/danseuse.jpg" data-overlay="15"> 
+                      <p>Crayons de couleur et graphite sur papier <br> 17,6x 25<br> décembre 2024</p>
+                  </div>
+                  <div class="colonnes"> 
+
+                      <img id="Rainieskids" src="medias/calendrier_rainies_kids/mai.jpg" data-overlay="5"> 
+                      <h4>Calendrier Rainieskids</h4> 
+                      <p>Graphite, crayon de couleur et collage sur papier <br> 21x 29.7 <br> décembre 2023 </p>
+                      <img id="monthelon" src="medias/Monthelon/Monthelon_8.jpg" data-overlay="4"> 
+                      <h4>Monthelon</h4>
+                      <p>Résidence au Château de Monthelon <br>création collective In Situ<br> mai-juillet 2023</p>
+                      <img id="racines" src="medias/print_racines.jpg" data-overlay="6"> 
+                      <p>Graphite sur papier <br> 21x 29.7 <br> juin 2023</p>
+                      <img id="idk" src="medias/EPSON014.jpg" data-overlay="7"> 
+                      <p>Graphite sur papier <br> 29.7x 42 <br> juin 2024</p> 
+                      <img src="medias/2025/nouvelle_vague.jpg" data-overlay="16"> 
+                      <h4><span class="span1">NOUVELLE VAGUE ÉMOTIVE ( reste calme et roule très loin )</span><br> cover de single pour Eugène</h4>
+                      <p>Pastel sec et gras, crayons de couleur et graphite sur papier <br> 30x 30<br> octobre 2024</p> 
+                      <img id="papillons" src="medias/2025/papillon.jpg" data-overlay="17"> 
+                      <h4>allongée, papillon et poussins</h4>
+                      <p>Pastel sec et gras, crayons de couleur et graphite sur papier <br> 21x 29.7<br> novembre 2024</p> 
+                  </div>
+
+                  <div class="colonnes"> 
+                    <img id="film_sable" src="medias/film/chambre_nuit.jpg" data-overlay="9"> 
+                    <h4>Là où la terre devient du sable – Film</h4> 
+                      <p> Techniques mixtes sur divers papiers <br> travaillés et animés sur ordinateur<br> septembre 2023 – juin 2024</p>
+                      <img id="edition_sable" src="medias/livre_film/8.jpg" data-overlay="3"> 
+                      <h4>Là où la terre devient du sable – Édition</h4> 
+                      <p>Conçu et imprimé en mai et juin 2024<br> 8 exemplaires, 114 pages <br> Bruxelles</p>
+                      <img id="mdr_tableau" src="medias/mdr_tableau.jpg" data-overlay="10">                       
+                      <p>Graphite, pastel et crayon de couleur <br> 21x 29.7 <br> juin 2023</p>
+                      <img id="carte_postale" src="medias/carte_postale.jpg" data-overlay="11">                       
+                      <p>Crayon de couleur <br> Graphite sur papier</p>
+                      <img id="amities" src="medias/dessin_amitié.jpg" data-overlay="12">                     
+                      <p>Graphite, crayon de couleur et pastel sec sur papier <br> 21x 29.7 <br> juillet 2024</p>  
+                      <img id="clowns" src="medias/2025/two_clowns.jpg" data-overlay="18"> 
+                      <p>Pastel sec et gras, crayons de couleur et graphite sur papier<br> 21x 29.7<br> décembre 2024</p> 
+                      <img src="medias/2025/visuel_ekumen.jpg" data-overlay="19"> 
+                      <a id="Ekumen" href="https://www.ekumen.be"> <h4>Ekumen</h4> </a>
+                      <p>Pastel sec et gras, crayons de couleur et graphite sur papier<br> 21x 29.7<br> décembre 2024</p>
+                  </div> 
+              </div> 
+
+
+              <div class="colonne_smartphone">
+                <div class="colonnes_smartphone"> 
+
+                  <img id="bouee" src="medias/derniere_bouees/4.jpg" data-overlay="13"> 
+                  <h4>Après les dernières bouées</h4>
+                  <p>20 pages, 14.8x 21 <br>impression jet d’encre <br> assemblés à Bruxelles en septembre 2023</p>
+                  <img id="jeanette" src="medias/edition_mamie/1couv.jpg" data-overlay="1"> 
+                  <h4>Jeanette</h4>
+                  <p>Techniques mixtes sur papier <br>impression jet d’encre sur papier glacé <br> avril-juin 2024</p>
+                  <img id="iliona" src="medias/collaboration_Iliona/gif_iliona.gif" data-overlay="8"> 
+                  <h4><span class="span1">Le Lapin</span> &amp; <span class="span1">rater une rupture pour les nuls</span>, Iliona. </h4> 
+                  <p>Illustration <br> cover single, merchandising et web</p>
+                  <img id="Roy_Mustang" src="medias/print_roy_Mustang.jpg" data-overlay="2"> 
+                  <p>Graphite et crayon de couleur sur papier <br> 21x 29.7<br> juin 2024</p>
+                  <img id="Rainieskids" src="medias/calendrier_rainies_kids/mai.jpg" data-overlay="5"> 
+                  <h4>Calendrier Rainieskids</h4> 
+                  <p>Graphite, crayon de couleur et collage sur papier <br> 21x 29.7 <br> décembre 2023 </p>
+                  <img id="monthelon" src="medias/Monthelon/Monthelon_8.jpg" data-overlay="4"> 
+                  <h4>Monthelon</h4>
+                  <p>Résidence au Château de Monthelon <br>création collective In Situ<br> mai-juillet 2023</p>
+                  <img id="citrouille" src="medias/2025/citrouille.jpg" data-overlay="14"> 
+                  <p>Pastel sec et gras, crayons de couleur et graphite sur papier <br> 21x 29.7<br> novembre 2024</p>
+                  <img id="danseuse" src="medias/2025/danseuse.jpg" data-overlay="15"> 
+                  <p>Crayons de couleur et graphite sur papier <br> 17,6x 25<br> décembre 2024</p>
+                  <img src="medias/2025/visuel_ekumen.jpg" data-overlay="19"> 
+                  <a id="Ekumen" href="https://www.ekumen.be"> <h4>Ekumen</h4> </a>
+                  <p>Pastel sec et gras, crayons de couleur et graphite sur papier<br> 21x 29.7<br> décembre 2024</p>
+
+
+
+                  <img src="medias/tatouages/p10.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/chevaux.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/dos_7.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/flash_4.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/flash_dos_5.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/flash_papillon.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/flash_papilon_2.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/flash_perso.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/hand.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/monsieur_cou.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/planche.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/planche3.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/planche_2.jpg" data-overlay="20"> 
+                
+
+
+                </div> 
+
+
+               
+
+                <div class="colonnes_smartphone">
+
+                  <img id="racines" src="medias/print_racines.jpg" data-overlay="6"> 
+                  <p>Graphite sur papier <br> 21x 29.7 <br> juin 2023</p>
+                  <img id="idk" src="medias/EPSON014.jpg" data-overlay="7"> 
+                  <p>Graphite sur papier <br> 29.7x 42 <br> juin 2024</p>
+                  <img id="film_sable" src="medias/film/chambre_nuit.jpg" data-overlay="9"> 
+                  <h4>Là où la terre devient du sable – Film</h4> 
+                  <p> Techniques mixtes sur divers papiers <br> travaillés et animés sur ordinateur<br> septembre 2023 – juin 2024</p>
+                  <img id="edition_sable" src="medias/livre_film/8.jpg" data-overlay="3"> 
+                  <h4>Là où la terre devient du sable – Édition</h4> 
+                  <p>Conçu et imprimé en mai et juin 2024<br> 8 exemplaires, 114 pages <br> Bruxelles</p>
+                  <img id="mdr_tableau" src="medias/mdr_tableau.jpg" data-overlay="10"> 
+                  <p>Graphite, pastel et crayon de couleur <br> 21x 29.7 <br> juin 2023</p>
+                  <img id="carte_postale" src="medias/carte_postale.jpg" data-overlay="11"> 
+                  <p>Crayon de couleur <br> Graphite sur papier</p>
+                  <img id="amities" src="medias/dessin_amitié.jpg" data-overlay="12"> 
+                  <p>Graphite, crayon de couleur et pastel sec sur papier <br> 21x 29.7 <br> juillet 2024</p>
+                  <img id="clowns" src="medias/2025/two_clowns.jpg" data-overlay="18"> 
+                  <p>Pastel sec et gras, crayons de couleur et graphite sur papier<br> 21x 29.7<br> décembre 2024</p> 
+                  <img src="medias/2025/nouvelle_vague.jpg" data-overlay="16"> 
+                  <h4><span class="span1">NOUVELLE VAGUE ÉMOTIVE ( reste calme et roule très loin )</span>)<br> cover de single pour Eugène</h4>
+                  <p>Pastel sec et gras, crayons de couleur et graphite sur papier <br> 30x 30<br> octobre 2024</p> 
+                  <img id="papillons" src="medias/2025/papillon.jpg" data-overlay="17"> 
+                  <h4>allongée, papillon et poussins</h4>
+                  <p>Pastel sec et gras, crayons de couleur et graphite sur papier <br> 21x 29.7<br> novembre 2024</p> 
+
+
+
+
+                  <img src="medias/tatouages/post_flash_3.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/poupee_tatoooo.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tatoo_bras.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tatoo_dos.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tatoo_dos2.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tatoo_dos_3.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tatoo_jambe.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tatoo_mains.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tatoo_poupee.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tomate.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/post_flash.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/post_flash_2.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/visage_tatoo.jpg" data-overlay="20"> 
+                  
+
+
+                </div> 
+
+          
+
+
+
+          </div></section>
+   
+          <div class="container">
+            <section class="section-left">
+              <div id="credits">
+                <p id="creditsBtn">**crédits</p>
+              </div>
+              <div class="target">
+                <a href="Gallerie.html"> <p>Gallerie</p></a>
+                <a href="Illustrations.html"> <p>Illustrations</p></a>
+                <a href="Projets.html"> <p>Projets</p></a>
+                <a href="Tatouages.html"> <p>Tatouages</p></a>
+               
+               
+              </div>
+              <div class="contact">
+               
+                <p id="aboutMeBtn">info</p>
+                <a id="shop" target="_blank" href="https://kidiikat.bigcartel.com"> <p> shop</p> </a>
+                  <p id="contactBtn">contact</p>  
+              </div>
+            </section>
+          </div>
+      </div>
+
+<!-- html overlay menu -->
+      <div id="contactOverlay" class="overlay2">
+      <div class="overlay-content2">
+          <span class="close2" id="closeContact">×</span>
+          <a href="mailto:milabisbrouck@gmail.com"> </a><p><a href="mailto:milabisbrouck@gmail.com">milabisbrouck@gmail.com  </a> <br>
+          <a href="https://www.instagram.com/kidiikat?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw=="> @kidiikat  </a></p><a href="https://www.instagram.com/kidiikat?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw=="> </a>
+      </div>
+      </div>    
+      <div id="aboutMeOverlay" class="overlay2">
+          <div class="overlay-content2">
+              <span class="close2" id="closeAboutMe">×</span>
+              <!-- <h2>Mila Bisbrouck</h2> -->
+              <p>Mila Bisbrouck est née à Roubaix et a passé son adolescence entre la France et la Belgique. Après des études écourtées à l’erg à Bruxelles au sein des sections cinéma d’animation et bande dessinée, elle exerce aujourd’hui en région parisienne.  
+                <br><br> Elle est notamment membre de l’équipe de gestion du lieu culturel et salon de tatouage La Kermesse, et est également une participante régulière du Fanzines ? Festival, célébration mythique de la micro-édition et de l’illustration.
+                <br><br> Sa pratique, construite autour de différentes techniques comme le pastel gras, le crayon de couleur et le crayon graphite, remet le dessin au premier plan. Inspirée par des artistes comme Claude Ponti ou Henry Darger, Mila Bisbrouck crée dans ses dessins et tableaux des univers oniriques, où les traits du visages disparaissent parfois, au profit des paysages, des mouvements, des ornements, et où les couleurs, redistribuées de manière imprévisible entre chaque forme, se frôlent et se mélangent.
+                <br><br><br> Biographie par Romane Constant.</p>
+          </div>
+      </div>
+      </div>
+      <div class="container">
+          <section class="section-right">
+            <nav class="menu">
+               <a id="titre" href="index.html"> 
+                 <p>Mila Bisbrouck</p>
+                </a>
+                <div id="menusmartphone">
+                  <ul id="titremenu">
+                    <!-- <li><a class="menu-item" id="menu-tatouage"><p>tatouages</p></a></li> -->
+                      <li><a class="menu-item" target="_blank" href="https://kidiikat.bigcartel.com"><p>shop</p></a></li>
+                      <li><a class="menu-item" id="menu-contact"><p>contact</p></a></li>
+                      <li><a class="menu-item" id="menu-info"><p>info</p></a></li>
+                  </ul>
+              </div>
+            </nav>
+
+            <div id="overlay-contact" class="overlay-menu">
+              <div class="overlay-content-menu"> <br> <br>
+                <a href="mailto:milabisbrouck@gmail.com"> </a><p><a href="mailto:milabisbrouck@gmail.com">milabisbrouck@gmail.com  </a> <br>
+                <a href="https://www.instagram.com/kidiikat?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw=="> @kidiikat  </a></p><a href="https://www.instagram.com/kidiikat?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw=="> </a>
+                  
+              </div>
+          </div>
+          <div id="overlay-info" class="overlay-menu">
+              <div class="overlay-content-menu">
+                <br> <br>
+                <p>Mila Bisbrouck est née à Roubaix et a passé son adolescence entre la France et la Belgique. Après des études écourtées à l’erg au sein des sections cinéma d’animation et bande dessinée, elle exerce aujourd’hui en région parisienne.  
+                  <br><br> Elle est notamment membre de l’équipe de gestion du lieu culturel et salon de tatouage La Kermesse, et est également une participante régulière du Fanzines ? Festival, célébration mythique de la micro-édition et de l’illustration.
+                  <br><br> Sa pratique, construite autour de différentes techniques comme le pastel gras, le crayon de couleur et le crayon graphite, remet le dessin au premier plan. Inspirée par des artistes comme Claude Ponti ou Henry Darger, Mila Bisbrouck crée dans ses dessins et tableaux des univers oniriques, où les traits du visages disparaissent parfois, au profit des paysages, des mouvements, des ornements, et où les couleurs, redistribuées de manière imprévisible entre chaque forme, se frôlent et se mélangent.
+                  <br><br> Biographie par Romane Constant.</p>
+              </div>
+          </div>
+          
+
+
+              <div class="autre"> 
+                <div class="your-class slick-initialized slick-slider"><button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button> 
+                  <div class="slick-list draggable" style="height: 296.266px;"><div class="slick-track" style="opacity: 1; width: 15352px; transform: translate3d(-808px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/9.jpg"></div><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" style="width: 808px;"><img src="medias/caroussel/1.jpg"></div><div class="slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/2.jpg"></div><div class="slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/3.jpg"></div><div class="slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/4.jpg"></div><div class="slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/5.jpg"></div><div class="slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/6.jpg"></div><div class="slick-slide" data-slick-index="6" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/7.jpg"></div><div class="slick-slide" data-slick-index="7" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/8.jpg"></div><div class="slick-slide" data-slick-index="8" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/9.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="9" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/1.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="10" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/2.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="11" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/3.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="12" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/4.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="13" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/5.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="14" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/6.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="15" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/7.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="16" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/8.jpg"></div><div class="slick-slide slick-cloned" data-slick-index="17" aria-hidden="true" tabindex="-1" style="width: 808px;"><img src="medias/caroussel/9.jpg"></div></div></div>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                           
+                <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button></div>
+              </div>
+
+              <div class="colonne">
+                  <div class="colonnes"> 
+
+                      <img id="bouee" src="medias/derniere_bouees/4.jpg" data-overlay="13"> 
+                      <h4>Après les dernières bouées</h4>
+                      <p>20 pages, 14.8x 21 <br>impression jet d’encre <br> assemblés à Bruxelles en septembre 2023</p>
+                      <img id="jeanette" src="medias/edition_mamie/1couv.jpg" data-overlay="1"> 
+                      <h4>Jeanette</h4>
+                      <p>Techniques mixtes sur papier <br>impression jet d’encre sur papier glacé <br> avril-juin 2024</p>
+                      <img id="iliona" src="medias/collaboration_Iliona/gif_iliona.gif" data-overlay="8"> 
+                      <h4><span class="span1">Le Lapin</span> &amp; <span class="span1">rater une rupture pour les nuls</span>, Iliona. </h4> 
+                      <p>Illustration <br> cover single, merchandising et web</p>
+                      <img id="Roy_Mustang" src="medias/print_roy_Mustang.jpg" data-overlay="2"> 
+                      <p>Graphite et crayon de couleur sur papier <br> 21x 29.7<br> juin 2024</p>
+                      <img id="citrouille" src="medias/2025/citrouille.jpg" data-overlay="14"> 
+                      <p>Pastel sec et gras, crayons de couleur et graphite sur papier <br> 21x 29.7<br> novembre 2024</p>
+                      <img id="danseuse" src="medias/2025/danseuse.jpg" data-overlay="15"> 
+                      <p>Crayons de couleur et graphite sur papier <br> 17,6x 25<br> décembre 2024</p>
+                  </div>
+                  <div class="colonnes"> 
+
+                      <img id="Rainieskids" src="medias/calendrier_rainies_kids/mai.jpg" data-overlay="5"> 
+                      <h4>Calendrier Rainieskids</h4> 
+                      <p>Graphite, crayon de couleur et collage sur papier <br> 21x 29.7 <br> décembre 2023 </p>
+                      <img id="monthelon" src="medias/Monthelon/Monthelon_8.jpg" data-overlay="4"> 
+                      <h4>Monthelon</h4>
+                      <p>Résidence au Château de Monthelon <br>création collective In Situ<br> mai-juillet 2023</p>
+                      <img id="racines" src="medias/print_racines.jpg" data-overlay="6"> 
+                      <p>Graphite sur papier <br> 21x 29.7 <br> juin 2023</p>
+                      <img id="idk" src="medias/EPSON014.jpg" data-overlay="7"> 
+                      <p>Graphite sur papier <br> 29.7x 42 <br> juin 2024</p> 
+                      <img src="medias/2025/nouvelle_vague.jpg" data-overlay="16"> 
+                      <h4><span class="span1">NOUVELLE VAGUE ÉMOTIVE ( reste calme et roule très loin )</span><br> cover de single pour Eugène</h4>
+                      <p>Pastel sec et gras, crayons de couleur et graphite sur papier <br> 30x 30<br> octobre 2024</p> 
+                      <img id="papillons" src="medias/2025/papillon.jpg" data-overlay="17"> 
+                      <h4>allongée, papillon et poussins</h4>
+                      <p>Pastel sec et gras, crayons de couleur et graphite sur papier <br> 21x 29.7<br> novembre 2024</p> 
+                  </div>
+
+                  <div class="colonnes"> 
+                    <img id="film_sable" src="medias/film/chambre_nuit.jpg" data-overlay="9"> 
+                    <h4>Là où la terre devient du sable – Film</h4> 
+                      <p> Techniques mixtes sur divers papiers <br> travaillés et animés sur ordinateur<br> septembre 2023 – juin 2024</p>
+                      <img id="edition_sable" src="medias/livre_film/8.jpg" data-overlay="3"> 
+                      <h4>Là où la terre devient du sable – Édition</h4> 
+                      <p>Conçu et imprimé en mai et juin 2024<br> 8 exemplaires, 114 pages <br> Bruxelles</p>
+                      <img id="mdr_tableau" src="medias/mdr_tableau.jpg" data-overlay="10">                       
+                      <p>Graphite, pastel et crayon de couleur <br> 21x 29.7 <br> juin 2023</p>
+                      <img id="carte_postale" src="medias/carte_postale.jpg" data-overlay="11">                       
+                      <p>Crayon de couleur <br> Graphite sur papier</p>
+                      <img id="amities" src="medias/dessin_amitié.jpg" data-overlay="12">                     
+                      <p>Graphite, crayon de couleur et pastel sec sur papier <br> 21x 29.7 <br> juillet 2024</p>  
+                      <img id="clowns" src="medias/2025/two_clowns.jpg" data-overlay="18"> 
+                      <p>Pastel sec et gras, crayons de couleur et graphite sur papier<br> 21x 29.7<br> décembre 2024</p> 
+                      <img src="medias/2025/visuel_ekumen.jpg" data-overlay="19"> 
+                      <a id="Ekumen" href="https://www.ekumen.be"> <h4>Ekumen</h4> </a>
+                      <p>Pastel sec et gras, crayons de couleur et graphite sur papier<br> 21x 29.7<br> décembre 2024</p>
+                  </div> 
+              </div> 
+
+
+              <div class="colonne_smartphone">
+                <div class="colonnes_smartphone"> 
+
+                  <img id="bouee" src="medias/derniere_bouees/4.jpg" data-overlay="13"> 
+                  <h4>Après les dernières bouées</h4>
+                  <p>20 pages, 14.8x 21 <br>impression jet d’encre <br> assemblés à Bruxelles en septembre 2023</p>
+                  <img id="jeanette" src="medias/edition_mamie/1couv.jpg" data-overlay="1"> 
+                  <h4>Jeanette</h4>
+                  <p>Techniques mixtes sur papier <br>impression jet d’encre sur papier glacé <br> avril-juin 2024</p>
+                  <img id="iliona" src="medias/collaboration_Iliona/gif_iliona.gif" data-overlay="8"> 
+                  <h4><span class="span1">Le Lapin</span> &amp; <span class="span1">rater une rupture pour les nuls</span>, Iliona. </h4> 
+                  <p>Illustration <br> cover single, merchandising et web</p>
+                  <img id="Roy_Mustang" src="medias/print_roy_Mustang.jpg" data-overlay="2"> 
+                  <p>Graphite et crayon de couleur sur papier <br> 21x 29.7<br> juin 2024</p>
+                  <img id="Rainieskids" src="medias/calendrier_rainies_kids/mai.jpg" data-overlay="5"> 
+                  <h4>Calendrier Rainieskids</h4> 
+                  <p>Graphite, crayon de couleur et collage sur papier <br> 21x 29.7 <br> décembre 2023 </p>
+                  <img id="monthelon" src="medias/Monthelon/Monthelon_8.jpg" data-overlay="4"> 
+                  <h4>Monthelon</h4>
+                  <p>Résidence au Château de Monthelon <br>création collective In Situ<br> mai-juillet 2023</p>
+                  <img id="citrouille" src="medias/2025/citrouille.jpg" data-overlay="14"> 
+                  <p>Pastel sec et gras, crayons de couleur et graphite sur papier <br> 21x 29.7<br> novembre 2024</p>
+                  <img id="danseuse" src="medias/2025/danseuse.jpg" data-overlay="15"> 
+                  <p>Crayons de couleur et graphite sur papier <br> 17,6x 25<br> décembre 2024</p>
+                  <img src="medias/2025/visuel_ekumen.jpg" data-overlay="19"> 
+                  <a id="Ekumen" href="https://www.ekumen.be"> <h4>Ekumen</h4> </a>
+                  <p>Pastel sec et gras, crayons de couleur et graphite sur papier<br> 21x 29.7<br> décembre 2024</p>
+
+
+
+                  <img src="medias/tatouages/p10.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/chevaux.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/dos_7.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/flash_4.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/flash_dos_5.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/flash_papillon.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/flash_papilon_2.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/flash_perso.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/hand.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/monsieur_cou.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/planche.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/planche3.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/planche_2.jpg" data-overlay="20"> 
+                
+
+
+                </div> 
+
+
+               
+
+                <div class="colonnes_smartphone">
+
+                  <img id="racines" src="medias/print_racines.jpg" data-overlay="6"> 
+                  <p>Graphite sur papier <br> 21x 29.7 <br> juin 2023</p>
+                  <img id="idk" src="medias/EPSON014.jpg" data-overlay="7"> 
+                  <p>Graphite sur papier <br> 29.7x 42 <br> juin 2024</p>
+                  <img id="film_sable" src="medias/film/chambre_nuit.jpg" data-overlay="9"> 
+                  <h4>Là où la terre devient du sable – Film</h4> 
+                  <p> Techniques mixtes sur divers papiers <br> travaillés et animés sur ordinateur<br> septembre 2023 – juin 2024</p>
+                  <img id="edition_sable" src="medias/livre_film/8.jpg" data-overlay="3"> 
+                  <h4>Là où la terre devient du sable – Édition</h4> 
+                  <p>Conçu et imprimé en mai et juin 2024<br> 8 exemplaires, 114 pages <br> Bruxelles</p>
+                  <img id="mdr_tableau" src="medias/mdr_tableau.jpg" data-overlay="10"> 
+                  <p>Graphite, pastel et crayon de couleur <br> 21x 29.7 <br> juin 2023</p>
+                  <img id="carte_postale" src="medias/carte_postale.jpg" data-overlay="11"> 
+                  <p>Crayon de couleur <br> Graphite sur papier</p>
+                  <img id="amities" src="medias/dessin_amitié.jpg" data-overlay="12"> 
+                  <p>Graphite, crayon de couleur et pastel sec sur papier <br> 21x 29.7 <br> juillet 2024</p>
+                  <img id="clowns" src="medias/2025/two_clowns.jpg" data-overlay="18"> 
+                  <p>Pastel sec et gras, crayons de couleur et graphite sur papier<br> 21x 29.7<br> décembre 2024</p> 
+                  <img src="medias/2025/nouvelle_vague.jpg" data-overlay="16"> 
+                  <h4><span class="span1">NOUVELLE VAGUE ÉMOTIVE ( reste calme et roule très loin )</span>)<br> cover de single pour Eugène</h4>
+                  <p>Pastel sec et gras, crayons de couleur et graphite sur papier <br> 30x 30<br> octobre 2024</p> 
+                  <img id="papillons" src="medias/2025/papillon.jpg" data-overlay="17"> 
+                  <h4>allongée, papillon et poussins</h4>
+                  <p>Pastel sec et gras, crayons de couleur et graphite sur papier <br> 21x 29.7<br> novembre 2024</p> 
+
+
+
+
+                  <img src="medias/tatouages/post_flash_3.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/poupee_tatoooo.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tatoo_bras.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tatoo_dos.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tatoo_dos2.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tatoo_dos_3.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tatoo_jambe.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tatoo_mains.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tatoo_poupee.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/tomate.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/post_flash.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/post_flash_2.jpg" data-overlay="20"> 
+                  <img src="medias/tatouages/visage_tatoo.jpg" data-overlay="20"> 
+                  
+
+
+                </div> 
+
+          
+
+
+
+          </div></section>
+   
+          <div class="container">
+            <section class="section-left">
+              <div id="credits">
+                <p id="creditsBtn">**crédits</p>
+              </div>
+              <div class="target">
+                <a href="Gallerie.html"> <p>Gallerie</p></a>
+                <a href="Illustrations.html"> <p>Illustrations</p></a>
+                <a href="Projets.html"> <p>Projets</p></a>
+                <a href="Tatouages.html"> <p>Tatouages</p></a>
+               
+               
+              </div>
+              <div class="contact">
+               
+                <p id="aboutMeBtn">info</p>
+                <a id="shop" target="_blank" href="https://kidiikat.bigcartel.com"> <p> shop</p> </a>
+                  <p id="contactBtn">contact</p>  
+              </div>
+            </section>
+          </div>
+      </div>
+
+<!-- html overlay menu -->
+      <div id="contactOverlay" class="overlay2">
+      <div class="overlay-content2">
+          <span class="close2" id="closeContact">×</span>
+          <a href="mailto:milabisbrouck@gmail.com"> </a><p><a href="mailto:milabisbrouck@gmail.com">milabisbrouck@gmail.com  </a> <br>
+          <a href="https://www.instagram.com/kidiikat?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw=="> @kidiikat  </a></p><a href="https://www.instagram.com/kidiikat?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw=="> </a>
+      </div>
+      </div>    
+      <div id="aboutMeOverlay" class="overlay2">
+          <div class="overlay-content2">
+              <span class="close2" id="closeAboutMe">×</span>
+              <!-- <h2>Mila Bisbrouck</h2> -->
+              <p>Mila Bisbrouck est née à Roubaix et a passé son adolescence entre la France et la Belgique. Après des études écourtées à l’erg à Bruxelles au sein des sections cinéma d’animation et bande dessinée, elle exerce aujourd’hui en région parisienne.  
+                <br><br> Elle est notamment membre de l’équipe de gestion du lieu culturel et salon de tatouage La Kermesse, et est également une participante régulière du Fanzines ? Festival, célébration mythique de la micro-édition et de l’illustration.
+                <br><br> Sa pratique, construite autour de différentes techniques comme le pastel gras, le crayon de couleur et le crayon graphite, remet le dessin au premier plan. Inspirée par des artistes comme Claude Ponti ou Henry Darger, Mila Bisbrouck crée dans ses dessins et tableaux des univers oniriques, où les traits du visages disparaissent parfois, au profit des paysages, des mouvements, des ornements, et où les couleurs, redistribuées de manière imprévisible entre chaque forme, se frôlent et se mélangent.
+                <br><br><br> Biographie par Romane Constant.</p>
+          </div>
+      </div>
+      </div>
       <div class="container">
           <section class="section-right">
             <nav class="menu">
