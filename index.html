@@ -62,7 +62,7 @@
  <div id="introduction" style="display: none;">
   <img src="medias/binder_mila.gif" alt="Image d'introduction" onload="img_load();">
 </div>
-<script>
+<!-- <script>
 let t ;
 function img_load() {
 $("body").css("display","block");
@@ -133,9 +133,94 @@ t = localStorage.getItem("lecture");
     }
   }
   
-  </script>
+  </script> -->
 
 
+  <script>
+
+
+
+
+    let t ;
+    
+    
+    
+    function img_load() {
+    
+    
+    
+    
+    
+      $("body").css("display","block");
+      t = localStorage.getItem("lecture");
+    
+      if (t == "ok") {
+    
+        const intro = document.getElementById('introduction');
+                  const mainContent = document.getElementById('main-content');
+                  if (intro && mainContent) {
+                    intro.style.display = 'none'; 
+                    mainContent.style.display = 'block'; 
+                    mainContent.style.opacity = '1'; 
+        
+                    if (typeof $ !== "undefined" && $('.your-class').slick) {
+                      $('.your-class').slick('setPosition'); 
+                    }
+                  }
+    
+    
+      } else {
+    
+       document.addEventListener("DOMContentLoaded", function () { 
+        
+          if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        
+                  
+                const intro = document.getElementById('introduction');
+                  const mainContent = document.getElementById('main-content');
+                  if (intro && mainContent) {
+                    intro.style.display = 'none'; 
+                    mainContent.style.display = 'block'; 
+                    mainContent.style.opacity = '1'; 
+        
+                    if (typeof $ !== "undefined" && $('.your-class').slick) {
+                      $('.your-class').slick('setPosition'); 
+                    }
+                  }
+               
+        } else {
+        
+        
+          localStorage.setItem("lecture", "ok");
+          setTimeout(function () {
+                    const intro = document.getElementById('introduction');
+                    const mainContent = document.getElementById('main-content');
+        
+                    if (intro && mainContent) { 
+                      intro.style.transition = 'opacity 0.1s ease-out';
+                      intro.style.opacity = '0';
+        
+                      setTimeout(function () {
+                        intro.style.display = 'none';
+                        mainContent.style.display = 'block'; 
+        
+                        setTimeout(function () {
+                          mainContent.style.transition = 'opacity 0.1s ease-in';
+                          mainContent.style.opacity = '1'; 
+                          if (typeof $ !== "undefined" && $('.your-class').slick) {
+                            $('.your-class').slick('setPosition'); 
+                          }
+                        }, 5);
+                      }, 80);
+                    }
+                  }, 4300);
+                   
+                }
+              });
+            }
+          }
+          
+          </script>
 
 <!-- menu, photothèque, caroussel -->
     <div id="main-content" style="display: block; opacity: 1;">
