@@ -176,7 +176,7 @@ body {
         }
         #shop{
           text-decoration: none;
-          color: rgb(136, 136, 136));
+          color: rgb(136, 136, 136);
           
         }  
         #credits{        
@@ -524,15 +524,11 @@ body {
           color: rgb(0, 0, 0);
           background-color: rgb(255, 255, 255); 
         }
-
         .overlayCredits a {
-        
-         font-style: italic;
-         color: rgb(136, 136, 136);
-         /* color: black; */
-         filter: blur(0.5px);
-         text-decoration: none;
-
+          font-style: italic;
+          color: rgb(136, 136, 136);
+          filter: blur(0.5px);
+          text-decoration: none;
         }
         .overlay-contentCredits {
           position: relative;
@@ -544,8 +540,9 @@ body {
         .closeCredits {
           position: absolute;
           width: 20vw;
-          margin-top: 50px;
           height:100vh;
+          margin-top: 50px;
+          /* background-color: aquamarine; */
           top: 0;
           font-size: 2vw;
           cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path fill="%23000000" stroke="%23000000" stroke-width="0.25" d="M15 9V4.5c0-.83-.67-1.5-1.5-1.5h-3C9.67 3 9 3.67 9 4.5V9H4.5C3.67 9 3 9.67 3 10.5v3c0 .83.67 1.5 1.5 1.5H9v4.5c0 .83.67 1.5 1.5 1.5h3c.83 0 1.5-.67 1.5-1.5V15h4.5c.83 0 1.5-.67 1.5-1.5v-3c0-.83-.67-1.5-1.5-1.5H15Z"></path></svg>') 10 10, auto;
@@ -627,7 +624,7 @@ body {
       display: none;
     }
     #main-content {
-     padding-bottom: 50px;
+      margin-bottom: 20px;
     }
     .section-left {
      display: none;
@@ -698,9 +695,7 @@ body {
            font-size: 3vw;
            font-family: police1;
       }
-      .menu p{
-        /* transition: color 2s ease-out, filter 2s ease-out, font-style 2s ease-out; */
-      }
+    
       .menu p:hover{
         font-style: normal;
         filter: none;
