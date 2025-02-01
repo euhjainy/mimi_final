@@ -15,11 +15,12 @@ body {
     background-color: rgb(255, 255, 255); 
     cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path fill="%23000000" stroke="%23000000" stroke-width="0.25" d="M15 9V4.5c0-.83-.67-1.5-1.5-1.5h-3C9.67 3 9 3.67 9 4.5V9H4.5C3.67 9 3 9.67 3 10.5v3c0 .83.67 1.5 1.5 1.5H9v4.5c0 .83.67 1.5 1.5 1.5h3c.83 0 1.5-.67 1.5-1.5V15h4.5c.83 0 1.5-.67 1.5-1.5v-3c0-.83-.67-1.5-1.5-1.5H15Z"></path></svg>') 10 10, auto;
     color: rgb(136, 136, 136);
+    /*display: none;*/
 }
 
 /* main */
 #main-content {
-      display: none;
+     /* display: none;*/
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
     }
@@ -524,12 +525,19 @@ body {
           color: rgb(0, 0, 0);
           background-color: rgb(255, 255, 255); 
         }
+
         .overlayCredits a {
-          font-style: italic;
-          color: rgb(136, 136, 136);
-          filter: blur(0.5px);
-          text-decoration: none;
+         text-decoration: none;
+         color: rgb(0, 0, 0);
+         font-style: italic;
+         filter: blur(0.5px);
         }
+        .overlayCredits a:hover {
+          text-decoration: none;
+          color: rgb(0, 0, 0);
+          font-style: italic;
+          filter: blur(0px);
+         }
         .overlay-contentCredits {
           position: relative;
           text-align: left;
@@ -541,7 +549,6 @@ body {
           position: absolute;
           width: 20vw;
           height:100vh;
-          margin-top: 50px;
           /* background-color: aquamarine; */
           top: 0;
           font-size: 2vw;
@@ -577,10 +584,6 @@ body {
           font-size: 1vw;
         }
 
-        .credit_tel {
-          display: none;
-        }
-
 
 /* SMARTPHONE */
 
@@ -603,21 +606,6 @@ body {
   .colonnesmartphone{
     background-color: lawngreen;
   } */
-
-  .credit_tel {
-    color: rgb(136, 136, 136);
-    text-decoration: none;
-    display:flex;
-    padding-left: 10px;
-    font-size: 15px;
-  }
-
-  .credit_tel a {
-    font-style: italic;
-    color: rgb(136, 136, 136);
-    filter: blur(0.5px);
-    text-decoration: none;
-  }
 
   /* CURSOR */
   body{
@@ -642,9 +630,9 @@ body {
     #introduction img {
       display: none;
     }
-    #main-content {
-      margin-bottom: 20px;
-    }
+    /* #main-content {
+      display: block;
+    } */
     .section-left {
      display: none;
     }
@@ -714,7 +702,9 @@ body {
            font-size: 3vw;
            font-family: police1;
       }
-    
+      .menu p{
+        /* transition: color 2s ease-out, filter 2s ease-out, font-style 2s ease-out; */
+      }
       .menu p:hover{
         font-style: normal;
         filter: none;

@@ -9,6 +9,7 @@
   <link rel="icon" href="medias/binder_frame0001.png"> 
   <link rel="preconnect" href="https://rsms.me/">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
 </head>
 <body>
   
@@ -17,115 +18,53 @@
 
 <!-- Introduction binder -->
  <div id="introduction">
-      <img src="medias/binder_mila.gif" alt="Image d'introduction">
-  </div>
-  <!-- <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        if (window.matchMedia("(min-width: 900px)").matches) {
-          setTimeout(function () {
-            const intro = document.getElementById('introduction');
-            const mainContent = document.getElementById('main-content');
-
-            if (intro && mainContent) { 
-              intro.style.transition = 'opacity 0.1s ease-out';
-              intro.style.opacity = '0';
-
-              setTimeout(function () {
-                intro.style.display = 'none';
-                mainContent.style.display = 'block'; 
-
-                setTimeout(function () {
-                  mainContent.style.transition = 'opacity 0.1s ease-in';
-                  mainContent.style.opacity = '1'; 
-                  if (typeof $ !== "undefined" && $('.your-class').slick) {
-                    $('.your-class').slick('setPosition'); 
-                  }
-                }, 5);
-              }, 80);
-            }
-          }, 4300);
-        } else {
-          const intro = document.getElementById('introduction');
-          const mainContent = document.getElementById('main-content');
-          if (intro && mainContent) {
-            intro.style.display = 'none'; 
-            mainContent.style.display = 'block'; 
-            mainContent.style.opacity = '1'; 
-
-            if (typeof $ !== "undefined" && $('.your-class').slick) {
-              $('.your-class').slick('setPosition'); 
-            }
-          }
-        }
-      });
-  </script> -->
-
-  <script>
+      <img src="medias/binder_mila.gif" alt="Image d'introduction" >
+</div>
+ 
 
 
-    
-
-    // recup derniere image du gif 
-    // charger gif puis site 
-    //
-    
-    
-      document.addEventListener("DOMContentLoaded", function () {
-    
-    
-    
-          if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    
-              
-            const intro = document.getElementById('introduction');
-              const mainContent = document.getElementById('main-content');
-              if (intro && mainContent) {
-                intro.style.display = 'none'; 
-                mainContent.style.display = 'block'; 
-                mainContent.style.opacity = '1'; 
-    
-                if (typeof $ !== "undefined" && $('.your-class').slick) {
-                  $('.your-class').slick('setPosition'); 
-                }
-              }
-           
-    } else {
-    
-    
-    
-      setTimeout(function () {
-                const intro = document.getElementById('introduction');
-                const mainContent = document.getElementById('main-content');
-    
-                if (intro && mainContent) { 
-                  intro.style.transition = 'opacity 0.1s ease-out';
-                  intro.style.opacity = '0';
-    
-                  setTimeout(function () {
-                    intro.style.display = 'none';
-                    mainContent.style.display = 'block'; 
-    
-                    setTimeout(function () {
-                      mainContent.style.transition = 'opacity 0.1s ease-in';
-                      mainContent.style.opacity = '1'; 
-                      if (typeof $ !== "undefined" && $('.your-class').slick) {
-                        $('.your-class').slick('setPosition'); 
-                      }
-                    }, 5);
-                  }, 80);
-                }
-              }, 4300);
-    
-    
-            
-            }
-          });
-    
-      
-      </script>
+<script>
 
 
+let s = "ok" ;
 
+$( document ).ready(function() {
+
+   s = localStorage.getItem("sauv");
+
+   console.log(s);
+
+  if (s == "loadok"){
+    chargement();
+  } else {
+
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      // true for mobile device
+      $("#main-content").css("opacity", "1");
+      document.getElementById("main-content").style.opacity = 1;
+   
+    }else{
+      // false for not mobile device
+      setTimeout("chargement()",4300);
+    }
+
+
+  }
+
+
+});
+    
+
+function chargement() {
+      $("#introduction").css("display", "none");
+      $("#main-content").css("display", "block");
+      $("#main-content").css("opacity", "1");
+      localStorage.setItem("sauv", "loadok");
+
+}
+
+
+</script>
 
 
   
@@ -342,8 +281,6 @@
 
                 </div> 
 
-                
-
           
 
 
@@ -356,7 +293,7 @@
                 <p id="creditsBtn">**crédits</p>
               </div>
               <div class="target">
-                <a href="Gallerie.html"> <p>Gallerie</p></a>
+                <a href="Galerie.html"> <p>Galerie</p></a>
                 <a href="Illustrations.html"> <p>Illustrations</p></a>
                 <a href="Projets.html"> <p>Projets</p></a>
                 <a href="Tatouages.html"> <p>Tatouages</p></a>
@@ -397,13 +334,9 @@
       <div id="creditsOverlay" class="overlayCredits"> 
           <div class="overlay-contentCredits">
           <span class="closeCredits" id="closeCredits">&times;</span> 
-          <p> Site web réalisé par <a target="_blank" href="https://www.instagram.com/eugeniemarissal/">Eugénie Marissal</a></p>
+          <p> Site web réalisé par <a target="_blank" href="https://eugeniemarissal.fr/">Eugénie Marissal</a></p>
           </div>
       </div>
-
-      <!-- <div class="credit_tel">
-        <p> Site web réalisé par <a target="_blank" href="https://www.instagram.com/eugeniemarissal/">Eugénie Marissal</a></p>
-        </div> -->
 
       <!-- scirpt overlay contact&info -->
 <script>
@@ -1072,19 +1005,15 @@
 </div>
 
 
-
-
 </div>
 </div>
-
-
 
 
 
 
 
   
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
 <script src="script.js"></script>
